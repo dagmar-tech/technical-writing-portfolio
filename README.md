@@ -12,7 +12,7 @@ My work combines technical investigation, collaboration with technical teams, an
 
 ### Tutorials
 
-- **[Releasing a Versioned Phrasebook Package](tutorials/releasing-a-versioned-phrasebook-package.md)** — An end-to-end tutorial covering resource preparation, validation, file extraction, Git version control, pull requests, QA approval, and troubleshooting.
+- **[Releasing a Versioned Phrasebook Package](tutorials/releasing-a-versioned-phrasebook-package.md)**: An end-to-end tutorial covering resource preparation, validation, file extraction, Git version control, pull requests, QA approval, and troubleshooting.
 
 ## Notes
 
