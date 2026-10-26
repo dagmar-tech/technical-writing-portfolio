@@ -1,4 +1,4 @@
-# Releasing a Versioned Phrasebook Package
+# Releasing a versioned Phrasebook package
 
 ## Purpose and scope
 
@@ -14,6 +14,18 @@ The Phrasebook app contains two resource types:
 - **Phrase sets:** Topic-based phrases, such as checking out of a hotel. Phrase sets import one or more glossaries.
 
 The release process covers resource preparation, validation and testing, file export, Git version control, and quality assurance (QA).
+
+## Contents
+
+- [Prerequisites](#prerequisites)
+- [1. Prepare the release](#1-prepare-the-release)
+- [2. Validate the resources](#2-validate-the-resources)
+- [3. Export and prepare the files](#3-export-and-prepare-the-files)
+- [4. Submit the files through Git](#4-submit-the-files-through-git)
+- [5. Complete QA](#5-complete-qa)
+- [6. Troubleshooting](#6-troubleshooting)
+- [7. Final checklist](#7-final-checklist)
+- [Verification and limitations](#verification-and-limitations)
 
 ## Prerequisites
 
@@ -31,7 +43,7 @@ These conventions apply to the fictional example.
 |---|---|
 | Release ticket | `REL-208` |
 | App version | `4.7.0` |
-| Resource version | `<app version>-r<revision>`, e.g. `4.7.0-r12` |
+| Resource version | `<app version>-r<revision>`, for example, `4.7.0-r12` |
 | Resource name | `<locale>-<kind>-<topic>`, using lowercase letters, digits, and hyphens |
 | Example names | `en-glossary-core`, `de-phrases-checkout` |
 | Export format | `<resource name>.gpack`, containing one extensionless XML file named after the resource |
@@ -50,7 +62,7 @@ Resource names contain no dots. This lets the renaming command distinguish exten
 
 Check that the release ticket specifies the correct app version. For this example, the ticket is `REL-208` and the app version is `4.7.0`.
 
-In the content editor, set each resource's version. For example, `4.7.0-r12` means app version `4.7.0`, revision 12. The version is stored in the resource content and included in the export; it is not part of the filename.
+In the content editor, set each resource's version. For example, `4.7.0-r12` means app version `4.7.0`, revision 12. The resource content stores the version, which is included in the export. The filename does not contain the version.
 
 ### 1.2 Add change summaries
 
@@ -66,17 +78,17 @@ Run the content editor's validation checks for each glossary and resolve all err
 
 ### 2.2 Import glossaries and test phrase sets
 
-1. Export the glossaries required by the phrase sets. These exports are for importing into phrase sets; they are not the final release files.
-2. Import each glossary into the phrase sets that use it.
+1. **Export** the glossaries required by the phrase sets. These exports are for importing into phrase sets; they are not the final release files.
+2. **Import** each glossary into the phrase sets that use it.
 3. Validate each phrase set and run its automated tests.
 
-The required test result is **100%, with no errors or warnings**. If a check fails, investigate and fix the underlying issue, then repeat validation and testing. If you cannot resolve it, follow the escalation procedure in [Section 2.1](#21-validate-glossaries) and add the test results to the ticket.
+The required pass rate is **100%, with no errors or warnings**. If a check fails, investigate and fix the underlying issue, then repeat validation and testing. If you cannot resolve it, follow the escalation procedure in [Section 2.1](#21-validate-glossaries) and add the test results to the ticket.
 
 ## 3. Export and prepare the files
 
 ### 3.1 Export resources
 
-Use the content editor's **Batch Export** to export every resource in the release, including glossaries and phrase sets. Each export is named `<resource name>.gpack`; for example, `en-glossary-core.gpack`. The resource version remains in the exported content, not the filename.
+Export every resource in the release from the content editor, including glossaries and phrase sets. Each export is named `<resource name>.gpack`; for example, `en-glossary-core.gpack`. The resource version remains in the exported content, not the filename.
 
 Save the `.gpack` files in a dedicated working directory. The commands below assume that directory is your current directory.
 
@@ -243,10 +255,10 @@ git diff --cached --stat
 git diff --cached
 ```
 
-Confirm that the correct files and content are staged. To unstage a file added by mistake:
+Confirm that the correct files and content are staged. To unstage a file added by mistake, replace `FILE_PATH` with the path of the file you want to unstage:
 
 ```bash
-git restore --staged <path>
+git restore --staged FILE_PATH
 ```
 
 ### 4.5 Commit, push, and open a pull request
@@ -274,10 +286,10 @@ The QA team imports the files into a test environment and runs the required test
 2. Identify the affected resources or files.
 3. If resource content needs to change, correct it in the content editor and rerun the relevant validation and automated tests.
 4. Re-export the updated resource, extract it, add the `.xml` extension, and copy it to the correct repository location.
-5. Stage and review the change:
+5. Stage and review the change. Replace `FILE_PATH` with the path of the file you want to stage:
 
    ```bash
-   git add <path>
+   git add FILE_PATH
    git diff --cached --stat
    git diff --cached
    ```
@@ -308,7 +320,7 @@ Merge the pull request according to the project's established workflow.
 | A file was not renamed | The command skips names containing a dot. Check the filename and rename it manually if appropriate. |
 | XML syntax check fails | Review the reported file and parsing error. Correct the resource in the content editor and re-export it rather than editing the exported XML by hand. |
 | Repository destination is unclear | Run `git ls-files '*.xml'` and compare resources with the same locale and type; ask the maintainer if needed. |
-| Unexpected Git changes appear | Run `git status` and inspect changes with `git diff <path>` before staging or committing. |
+| Unexpected Git changes appear | Run `git status` and inspect a file with `git diff -- FILE_PATH` before staging or committing. Replace `FILE_PATH` with the file path. |
 | `git commit` says no changes are staged | Stage the intended paths with `git add`, then review with `git diff --cached --stat`. |
 | `git pull --ff-only` fails | Check `git status` and `git log --oneline origin/main..main`. Follow the team's integration procedure or ask the maintainer before reconciling divergent history. |
 | Shell reports `[[: not found` | Run the command in Bash, not `sh`. |
@@ -331,4 +343,4 @@ After QA approval, merge the pull request according to the project's workflow.
 
 The Bash extraction and renaming commands were tested on Ubuntu 24.04.1 LTS using Bash 5.2.21 and synthetic ZIP archives. The sample XML files were checked for well-formedness with Python's XML parser. Git file discovery, staging, diff review, and commit commands were tested with Git 2.53.0 in a local repository containing one new and one modified XML file.
 
-These tests verify the command behaviour described above; they do not demonstrate compatibility with a real product. The `.gpack` format and repository structure are fictional examples. Pushing a branch and opening a pull request were not tested.
+These tests verify the command behavior described above; they do not demonstrate compatibility with a real product. The `.gpack` format and repository structure are fictional examples. Pushing a branch and opening a pull request were not tested.
