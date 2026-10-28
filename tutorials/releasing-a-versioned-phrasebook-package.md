@@ -341,6 +341,6 @@ After QA approval, merge the pull request according to the project's workflow.
 
 ## Verification and limitations
 
-The Bash extraction and renaming commands were tested on Ubuntu 24.04.1 LTS using Bash 5.2.21 and synthetic ZIP archives. The sample XML files were checked for well-formedness with Python's XML parser. Git file discovery, staging, diff review, and commit commands were tested with Git 2.53.0 in a local repository containing one new and one modified XML file.
+The Bash extraction and renaming commands were tested on Ubuntu 26.04.1 LTS using Bash 5.3.9 and synthetic ZIP archives. The sample XML files were checked for well-formedness with Python's XML parser. Git file discovery, staging, diff review, and commit commands were tested with Git 2.53.0 in a local repository containing one new and one modified XML file.
 
 These tests verify the command behavior described above; they do not demonstrate compatibility with a real product. The `.gpack` format and repository structure are fictional examples. Pushing a branch and opening a pull request were not tested.
