@@ -1,0 +1,8 @@
+{
+  "new_name": "Nimbra",
+  "old_names": ["Orbitwell Systems"],
+  "variants": ["Orbitwell", "OrbSys", "Orbit-Well"],
+  "ticket_prefix": "OWS",
+  "ambiguous_phrases": ["Orbit Systems"],
+  "generic_context_words": ["satellite", "trajectory", "orbital", "telemetry"]
+}

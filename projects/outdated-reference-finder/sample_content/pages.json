@@ -1,0 +1,79 @@
+[
+  {
+    "id": "CONF-1001",
+    "source_type": "confluence",
+    "title": "Getting started with Ground Link",
+    "last_modified": "2024-11-02",
+    "audience": "public",
+    "body": "Welcome to Ground Link, the satellite pass planner from Orbitwell Systems.\nBefore you begin, ask your administrator for an ORBITWELL account key.\nFor help, contact the Orbitwell support team.",
+    "attachments": []
+  },
+  {
+    "id": "CONF-1002",
+    "source_type": "confluence",
+    "title": "Release notes 3.2",
+    "last_modified": "2025-01-20",
+    "audience": "public",
+    "body": "Fixed pass-prediction drift (OWS-142).\nUpdated the OrbSys-compatible export format.\nKnown issue: OWS-155 affects exports larger than 2 GB.",
+    "attachments": []
+  },
+  {
+    "id": "CONF-1003",
+    "source_type": "confluence",
+    "title": "New starter checklist",
+    "last_modified": "2023-06-12",
+    "audience": "internal",
+    "body": "1. Request access to the Orbitwell Systems wiki.\n2. Introduce yourself to the Orbit Systems Engineering team.\n3. The ground team maintains orbit systems dashboards for satellite trajectory data; ask them for a walkthrough.",
+    "attachments": []
+  },
+  {
+    "id": "CONF-1004",
+    "source_type": "confluence",
+    "title": "Embedded platform notes",
+    "last_modified": "2025-05-08",
+    "audience": "internal",
+    "body": "Supported operating systems: Linux and Windows.\nThe firmware targets embedded systems and real-time systems.\nSee the systems design guide for details.",
+    "attachments": []
+  },
+  {
+    "id": "CONF-1005",
+    "source_type": "confluence",
+    "title": "Legal and licensing",
+    "last_modified": "2022-09-30",
+    "audience": "public",
+    "body": "See the attached files for licensing text.",
+    "attachments": [
+      {
+        "filename": "footer.txt",
+        "text": "Copyright 2023 Orbitwell Systems Inc. All rights reserved."
+      },
+      {
+        "filename": "license.txt",
+        "text": "This software is licensed by Orbitwell under the terms below."
+      }
+    ]
+  },
+  {
+    "id": "NMB-88",
+    "source_type": "jira",
+    "title": "Update export format docs",
+    "last_modified": "2025-02-03",
+    "audience": "internal",
+    "body": "Follows OWS-142. See also the ORBIT-WELL naming discussion in the wiki.",
+    "attachments": []
+  },
+  {
+    "id": "NMB-91",
+    "source_type": "jira",
+    "title": "Installer still shows old company name",
+    "last_modified": "2025-03-18",
+    "audience": "internal",
+    "body": "Customer asked why the installer still says Orbitwell Systems.",
+    "attachments": [
+      {
+        "filename": "installer-strings.csv",
+        "text": "key,value\nwelcome,Welcome to Orbitwell Systems Setup\nfinish,Setup complete"
+      }
+    ]
+  }
+]
