@@ -93,6 +93,29 @@ export default function Home() {
                 Explore project →
               </Link>
             </article>
+                              
+            <article className={styles.card}>
+              <p className={styles.cardCategory}>DOCUMENTATION REVIEW</p>
+
+              <h3>
+                <Link to="/docs/projects/grafana-fundamentals-tutorial-review">
+                  Grafana Fundamentals: hands-on documentation review
+                </Link>
+              </h3>
+
+              <p>
+                An independent, hands-on review of Grafana's Fundamentals
+                tutorial, identifying usability issues, outdated instructions,
+                and opportunities to improve the learning experience.
+              </p>
+
+              <Link
+                className={styles.cardLink}
+                to="/docs/projects/grafana-fundamentals-tutorial-review"
+              >
+                Read documentation review →
+              </Link>
+            </article>
           </div>
         </section>
 
