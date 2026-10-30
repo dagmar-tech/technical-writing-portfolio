@@ -9,6 +9,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Documentation reviews',
+      items: [
+        'projects/grafana-fundamentals-tutorial-review/README',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Projects',
       items: [
         'projects/outdated-reference-finder/README',
