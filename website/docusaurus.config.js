@@ -33,6 +33,7 @@ const config = {
           include: [
             'tutorials/releasing-a-versioned-phrasebook-package.md',
             'projects/outdated-reference-finder/README.md',
+            'projects/grafana-fundamentals-tutorial-review/README.md',
           ],
           sidebarPath: './sidebars.js',
         },
