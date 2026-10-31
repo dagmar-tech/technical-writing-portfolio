@@ -43,11 +43,23 @@ The tutorial refers to an **Apply** button, a disk icon for saving, and a gear i
 
 **Recommendation:** Recheck these steps against the Grafana version the tutorial supports. Use visible control labels rather than icon descriptions, explain the fields readers need to complete, and tell readers to refresh the dashboard if the generated error annotation does not appear. Avoid presenting Grafana 12 labels as universal across versions.
 
+![Grafana panel editor showing the query without an Apply button.](screenshots/02-panel-editor-query-entered-no-apply-button.png)
+
+![Save dashboard side panel with Title, Description, and Folder fields.](screenshots/03-save-dashboard-side-panel.png)
+
+![Grafana dashboard toolbar with the Settings button.](screenshots/04-dashboard-edit-toolbar-settings-button.png)
+
+![Annotation query settings page without an Apply button.](screenshots/05-annotation-query-settings-no-apply-button.png)
+
+![Loki error annotation displayed on the dashboard after refreshing.](screenshots/06-loki-error-annotation-on-dashboard.png)
+
 ### 3. Explain how to recover from an empty log time range
 
 **Where:** *Explore your logs*, after the instruction to drag across the histogram.
 
 Dragging across the histogram changed the selected time range. In my test, it narrowed the range to a single second, and Grafana displayed “No logs volume available” and “No logs found.” The tutorial does not explain that the selection changes the time range or how to recover. I restored the logs by selecting `/var/log/tns-app.log` under **filename** in the Label browser and clicking **Show logs**.
+
+![Grafana Explore showing an empty log view after selecting a one-second time range.](screenshots/01-explore-no-logs-zero-length-time-range.png)
 
 **Suggested addition:**
 
