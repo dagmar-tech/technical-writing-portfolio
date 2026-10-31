@@ -37,6 +37,13 @@ export default function Home() {
             >
               Explore projects
             </Link>
+                
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/projects/grafana-fundamentals-tutorial-review"
+            >
+              Explore documentation reviews
+            </Link>
           </div>
         </div>
       </header>
