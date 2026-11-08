@@ -123,6 +123,29 @@ export default function Home() {
                 Read documentation review →
               </Link>
             </article>
+            
+            <article className={styles.card}>
+              <p className={styles.cardCategory}>PROJECT</p>
+
+              <h3>
+                <Link to="/docs/projects/docs-release-pipeline">
+                  Keeping docs current at release speed
+                </Link>
+              </h3>
+
+              <p>
+                A working pipeline that checks docs against product facts,
+                prepares AI drafting prompts, and keeps a person in charge of
+                what gets published.
+              </p>
+
+              <Link
+                className={styles.cardLink}
+                to="/docs/projects/docs-release-pipeline"
+              >
+                Explore project →
+              </Link>
+            </article>
           </div>
         </section>
 
@@ -137,8 +160,9 @@ export default function Home() {
           </p>
 
           <p>
-            The portfolio includes a fictional tutorial and an
-            anonymized, experience-based project demo.
+            The portfolio includes a fictional tutorial, an independent
+            documentation review, and project demos built on anonymized or
+            fictional data.
           </p>
 
           <p>
