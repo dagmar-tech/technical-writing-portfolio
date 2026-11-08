@@ -19,6 +19,7 @@ const sidebars = {
       label: 'Projects',
       items: [
         'projects/outdated-reference-finder/README',
+        'projects/docs-release-pipeline/README',
       ],
     },
   ],
