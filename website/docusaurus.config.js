@@ -35,6 +35,7 @@ const config = {
             'projects/outdated-reference-finder/README.md',
             'projects/grafana-fundamentals-tutorial-review/README.md',
             'projects/docs-release-pipeline/README.md',
+            'projects/troubleshooting-unexpected-search-results/README.md',
           ],
           sidebarPath: './sidebars.js',
         },
