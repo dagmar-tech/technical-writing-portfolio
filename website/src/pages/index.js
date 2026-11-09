@@ -146,6 +146,29 @@ export default function Home() {
                 Explore project →
               </Link>
             </article>
+
+            <article className={styles.card}>
+              <p className={styles.cardCategory}>E-LEARNING</p>
+
+              <h3>
+                <Link to="/docs/projects/troubleshooting-unexpected-search-results">
+                  Troubleshooting Unexpected Search Results
+                </Link>
+              </h3>
+
+              <p>
+                A scenario-based minicourse for customer-facing technical
+                teams, teaching an evidence-first approach to diagnosing
+                unexpected e-commerce search results.
+              </p>
+
+              <Link
+                className={styles.cardLink}
+                to="/docs/projects/troubleshooting-unexpected-search-results"
+              >
+                Explore minicourse →
+              </Link>
+            </article>
           </div>
         </section>
 
