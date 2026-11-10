@@ -21,6 +21,7 @@ const sidebars = {
         'projects/outdated-reference-finder/README',
         'projects/docs-release-pipeline/README',
         'projects/troubleshooting-unexpected-search-results/README',
+        'projects/troubleshooting-unexpected-search-results/instructional-design-rationale',
       ],
     },
   ],
