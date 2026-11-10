@@ -36,6 +36,7 @@ const config = {
             'projects/grafana-fundamentals-tutorial-review/README.md',
             'projects/docs-release-pipeline/README.md',
             'projects/troubleshooting-unexpected-search-results/README.md',
+            'projects/troubleshooting-unexpected-search-results/instructional-design-rationale.md',
           ],
           sidebarPath: './sidebars.js',
         },
