@@ -18,7 +18,7 @@ By the end of the course, learners should be able to:
 ## Course materials
 
 - [Course preview (PDF)](troubleshooting-unexpected-search-results-course.pdf)
-- [Instructional design rationale (PDF)](instructional-design-rationale.pdf)
+- [Instructional design rationale](instructional-design-rationale.md)
 
 ## Format
 
