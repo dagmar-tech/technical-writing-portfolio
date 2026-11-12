@@ -22,6 +22,8 @@ This repository brings together examples of my work in technical documentation, 
 
 ### Instructional design and product education
 
+- **[Designing a conversation partner: Lucía](docs/projects/persona-demo-lucia.md):** A conversational AI design sample covering persona definition, language-level adaptation, correction policies, behavioral boundaries, sample dialogues, and evaluation criteria.
+
 - **[Troubleshooting unexpected search results](projects/troubleshooting-unexpected-search-results/README.md):** A structured learning resource that guides readers through investigating and troubleshooting unexpected search behavior.
 
 ### Documentation automation and tooling
