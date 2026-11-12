@@ -169,6 +169,30 @@ export default function Home() {
                 Explore minicourse →
               </Link>
             </article>
+
+            <article className={styles.card}>
+              <p className={styles.cardCategory}>CONVERSATIONAL AI DESIGN</p>
+
+              <h3>
+                <Link to="/docs/projects/persona-demo-lucia">
+                  Designing a conversation partner: Lucía
+                </Link>
+              </h3>
+
+              <p>
+                A conversational AI design sample covering persona definition,
+                prompt development, language-level adaptation, correction
+                policies, behavioral boundaries, sample dialogues, and
+                evaluation criteria.
+              </p>
+
+              <Link
+                className={styles.cardLink}
+                to="/docs/projects/persona-demo-lucia"
+              >
+                Explore design sample →
+              </Link>
+            </article>
           </div>
         </section>
 
