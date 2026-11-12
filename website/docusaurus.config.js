@@ -37,6 +37,7 @@ const config = {
             'projects/docs-release-pipeline/README.md',
             'projects/troubleshooting-unexpected-search-results/README.md',
             'projects/troubleshooting-unexpected-search-results/instructional-design-rationale.md',
+            'docs/projects/persona-demo-lucia.md',
           ],
           sidebarPath: './sidebars.js',
         },
